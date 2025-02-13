@@ -35,21 +35,20 @@
                 <option value="cartao">Cartão de Crédito</option>
             </select>
 
-            <button type="submit">Pagar Agora</button>
+            <button type="submit" id="pagar">Pagar Agora</button>
         </form>
     </div>
-<script>
-document.getElementById("checkoutForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Impede o envio do formulário
-    
-    let formaPagamento = document.getElementById("pagamento").value;
-    
-    if (formaPagamento === "pix") {
-        window.location.href = "https://mpago.li/1Z43qs4"; // Redireciona para Pix
-    } else if (formaPagamento === "cartao") {
-        window.location.href = "https://mpago.li/1Z43qs4"; // Redireciona para Cartão
-    }
-});
-</script>
+
+    <script>
+        document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            let formaPagamento = document.getElementById("pagamento").value;
+            let linkPagamento = "https://mpago.li/1Z43qs4"; // Link de pagamento único para Pix e Cartão
+
+            window.location.href = linkPagamento; // Redireciona para o pagamento
+        });
+    </script>
+
 </body>
 </html>
