@@ -38,6 +38,18 @@
             <button type="submit">Pagar Agora</button>
         </form>
     </div>
-
+<script>
+document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio do formulário
+    
+    let formaPagamento = document.getElementById("pagamento").value;
+    
+    if (formaPagamento === "pix") {
+        window.location.href = "https://mpago.li/1Z43qs4"; // Redireciona para Pix
+    } else if (formaPagamento === "cartao") {
+        window.location.href = "https://mpago.li/1Z43qs4"; // Redireciona para Cartão
+    }
+});
+</script>
 </body>
 </html>
