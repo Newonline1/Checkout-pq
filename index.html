@@ -1,12 +1,43 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minha Página</title>
+    <title>Checkout</title>
+    <style>
+        * { font-family: Arial, sans-serif; margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        .container { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); width: 90%; max-width: 400px; }
+        h2 { text-align: center; margin-bottom: 20px; }
+        label { font-weight: bold; display: block; margin-top: 10px; }
+        input, select { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 4px; }
+        button { width: 100%; background: #28a745; color: white; padding: 10px; border: none; margin-top: 20px; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #218838; }
+    </style>
 </head>
 <body>
-    <h1>Checkout em Construção</h1>
-    <p>Olá, esta é minha página de teste.</p>
+
+    <div class="container">
+        <h2>Finalizar Compra</h2>
+        <form id="checkoutForm">
+            <label for="nome">Nome Completo</label>
+            <input type="text" id="nome" required>
+
+            <label for="email">E-mail</label>
+            <input type="email" id="email" required>
+
+            <label for="telefone">Telefone</label>
+            <input type="tel" id="telefone" required>
+
+            <label for="pagamento">Forma de Pagamento</label>
+            <select id="pagamento">
+                <option value="pix">Pix</option>
+                <option value="cartao">Cartão de Crédito</option>
+            </select>
+
+            <button type="submit">Pagar Agora</button>
+        </form>
+    </div>
+
 </body>
 </html>
